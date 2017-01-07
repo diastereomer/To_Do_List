@@ -1,0 +1,51 @@
+﻿<Window x:Class="To_Do_List.Views.LogIn"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:To_Do_List.Views"
+        xmlns:viewmodel="clr-namespace:To_Do_List.ViewModels"
+        mc:Ignorable="d"
+        Title="LogIn" SizeToContent="WidthAndHeight"
+        d:DataContext="{d:DesignInstance viewmodel:ViewModel}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Login" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="14" />
+        <Label Grid.Row="1" Grid.Column="0" Content="UserName" VerticalAlignment="Center" Margin="3"/>
+        <TextBox x:Name="Username" Grid.Row="1" Grid.Column="1" Margin="3" Height="Auto" Width="186"/>
+        <Label Grid.Row="2" Grid.Column="0" Content="Password" VerticalAlignment="Center" Margin="3"/>
+        <PasswordBox x:Name="Password" Grid.Row="2" Grid.Column="1" Margin="3"/>
+        <UniformGrid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Rows="1" Columns="2">
+            <Button  VerticalAlignment="Center" HorizontalAlignment="Center" Content="Login" Command="{Binding UserRelate}" />
+            <Button VerticalAlignment="Center" HorizontalAlignment="Center" Content="Forget Password"/>
+        </UniformGrid>
+
+        <Label Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Content="Register" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" />
+        <Label Grid.Row="1" Grid.Column="3" Content="UserName" VerticalAlignment="Center" Margin="3"/>
+        <TextBox x:Name="UserNameR" Grid.Row="1" Grid.Column="4" Margin="3" Height="Auto" Width="186"/>
+        <Label Grid.Row="2" Grid.Column="3" Content="Password" VerticalAlignment="Center" Margin="3"/>
+        <PasswordBox x:Name="PassWordR" Grid.Row="2" Grid.Column="4" Margin="3"/>
+        <Label Grid.Row="3" Grid.Column="3" Content="Repeat Password" VerticalAlignment="Center" Margin="3"/>
+        <PasswordBox x:Name="PassWordRM" Grid.Row="3" Grid.Column="4" Margin="3"/>
+        <Label Grid.Row="4" Grid.Column="3" Content="Full Name" VerticalAlignment="Center" Margin="3"/>
+        <TextBox x:Name="FullName" Grid.Row="4" Grid.Column="4" Margin="3" Height="Auto" Width="186"/>
+        <Label Grid.Row="5" Grid.Column="3" Content="User Group" VerticalAlignment="Center" Margin="3"/>
+        <TextBox x:Name="UserGroup" Grid.Row="5" Grid.Column="4" Margin="3" Height="Auto" Width="186"/>
+        <Button Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Register" Command="{Binding ItemRelated}"/>
+    </Grid>
+</Window>
