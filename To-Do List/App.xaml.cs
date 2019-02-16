@@ -12,6 +12,7 @@ namespace To_Do_List
     /// </summary>
     public partial class App : Application
     {
+        internal static int userId;
         private void App_OnStartUp(object sender, StartupEventArgs e)
         {
             Infrastructures.Factory factory = new Infrastructures.Factory();

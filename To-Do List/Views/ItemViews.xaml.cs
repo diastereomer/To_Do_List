@@ -17,11 +17,20 @@ namespace To_Do_List.Views
     /// <summary>
     /// Interaction logic for ItemViews.xaml
     /// </summary>
+   
     public partial class ItemViews : Window
     {
         public ItemViews()
         {
             InitializeComponent();
+        }
+
+        private void ResetFilter_Click(object sender, RoutedEventArgs e)
+        {
+            this.Category.SelectedItem = null;
+            this.UserGroup.SelectedItem = null;
+            this.DueIn.SelectedItem = null;
+            this.Status.SelectedItem = null;
         }
     }
 }
